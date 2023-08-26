@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .block{
+            position: relative;
+            bottom:0;
+            height: 100px;
+            width: 100px;
+            background-color: chartreuse;
+        }
+        .block2{
+            color: rgb(0, 42, 255);
+            /* background: linear-gradiant(69deg, cyan, purple); */
+            background: linear-gradient(69deg, cyan, purple);
+            width: clamp(150px, 300px, 400px);
+            height: clamp(150px, 300px, 400px);
+        }
+    </style>
+    <div class="block"></div>
+    <div class="block2"></div>
+</body>
+</html>

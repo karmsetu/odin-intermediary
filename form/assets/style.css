@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    font-family: Norse ;
+    font-size: large;
+}
+
+body{
+    display: flex;
+    /* overflow: hidden; */
+}
+
+img {
+    height: 100vh;
+}
+
+.content {
+    padding: 72px;
+}
+
+.form-container>form, .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin: 32px;
+}
+
+.form-container{
+    box-shadow: 2px 7px #8080802e;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 72px;
+}
