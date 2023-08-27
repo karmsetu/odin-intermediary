@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px;
+            grid-template-rows: 100px  ;
+            grid-auto-rows: 100px;
+            gap: 20px;
+        }
+        .child, .child-start, .child-end, .child-mid {
+            /* height: 100px;
+            width: 100px; */
+            background-color: chartreuse;
+            /* margin: 16px; */
+            border: 2px solid purple;
+        }
+        .child-start{
+            grid-column-start: 2;
+            grid-column-end: 6;
+            background-color: gold;
+        }
+        .child-end{
+            grid-column-start:1 ;
+            grid-column-end:5 ;
+            background-color: gold;
+        }
+        .child-mid {
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+    </style>
+    <div class="container">
+        <div class="child-start"></div>
+        <div class="child" style="grid-row-start: 1; grid-row-end: 3; background-color: aqua;"></div>
+        <div class="child"></div>
+        <div class="child" style="grid-row-start: 2; grid-column-start: 3; grid-row-end: 4; background-color: deeppink;"></div>
+        <div class="child" style=" grid-column-start: 5; grid-row-end: 5; grid-row-start: 3; background-color: aqua;"></div>
+        <!-- <div class="child"></div> -->
+        <div class="child" style=" grid-column-start: 4; grid-row-start: 2; grid-column-end: 6; background-color: crimson;"></div>
+        <!-- <div class="child"></div> -->
+        <div class="child" style="grid-column-start: 1; grid-column-end: 3; background-color: crimson;"></div>
+        <!-- <div class="child"></div> -->
+        <div class="child"></div>
+        <div class="child-end"></div>
+
+    </div>
+</body>
+</html>
