@@ -29,11 +29,64 @@ body {
     font-size: large;
 }
 
-nav {
+/* nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     grid-column: 2/4;
-}
+} */
 
 img {
-    height: 2remrem;
+    height: 2rem;
     width: 2rem;
+}
+
+.user-icon>img{
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.search-area {
+    /* display: flex;
+    justify-content: center; */
+    border-radius: 50px;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+}
+
+.header, .user-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin: 13px;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.header-options > button {
+    border: none;
+    padding: 8px;
+    background-color: #FFEA00;
+    border-radius: 50px;
+}
+
+.header-ext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3%;
+}
+
+.user-info {
+    display: flex;
+}
+
+.header-user-icon>img{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin: 10px;
 }
