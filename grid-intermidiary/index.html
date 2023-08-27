@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-interrmediary</title>
+</head>
+<body>
+    <style>
+        .container {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(5, minmax(20px, 1fr));
+            grid-template-rows: repeat(4, minmax(20px, 1fr));
+
+        }
+        .child {
+            background-color: chartreuse;
+            margin: 8px;
+            height: 100px;
+            width: 100px;
+            border: 2px solid purple;
+        }
+    </style>
+    <div class="container">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </div>
+</body>
+</html>
