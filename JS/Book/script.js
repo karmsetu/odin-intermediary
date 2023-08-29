@@ -1,15 +1,32 @@
 const myLibrary = [];
 
-function Book(title, author, pages, read=false) {
-  // the constructor...
+class Book{
+  constructor(title, author, pages, read=false){
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
+  }
 }
 
-function addBookToLibrary(title, author, pages, read) {
+// function Book() {
+//   // the constructor...
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+function addBookToLibrary(obj) {
   // do stuff here
-  let newBook = new Book(title, author, pages, read);
-  myLibrary.concat = newBook;
+  myLibrary.push(obj)
+
+}
+
+function showcase() {
+  let whileIndex = 0;
+  while (myLibrary.length() > 0) {
+    console.log(myLibrary[whileIndex])
+    whileIndex ++ 
+  }
 }
