@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book </title>
     <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="dialog close" >
+        <form class="dialog-form">
+            <label for="author">author</label>
+            <input type="text" id="author">
+            <label for="title">title</label>
+            <input type="text" name="title" id="title">
+            <label for="pages">pages</label>
+            <input type="text" name="pages" id="pages">
+            <!-- <label for="is-read">have you read it?</label> -->
+            <input type="radio" id="is-read-true" name="is-read" value="true">
+            <label for="is-read-true">Yes!</label>
+            <input type="radio" id="is-read-false" name="is-read" value="false">
+            <label for="is-read-false">Yes!</label>
+            <button  id="submit" onclick="getData()">submit</button>
+        </form>
+    </div>
+    <button class="open-dialog" onclick="openDialog()">New Book</button>
     <div class="show-case"></div>
 </body>
 </html>

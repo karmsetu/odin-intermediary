@@ -1,0 +1,16 @@
+.show-case {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.book {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    font-size: larger;
+    padding: 20px;
+    margin: 8px;
+}
+
+.close {
+    /* display: none; */
+}
