@@ -1,3 +1,5 @@
+const displayDiv = document.querySelector(`.show-case`)
+console.log(displayDiv)
 const myLibrary = [];
 
 class Book{
@@ -25,8 +27,16 @@ function addBookToLibrary(obj) {
 
 function showcase() {
   let whileIndex = 0;
-  while (myLibrary.length() > 0) {
-    console.log(myLibrary[whileIndex])
+  displayDivArray = []
+  while (myLibrary.length > whileIndex) {
     whileIndex ++ 
   }
 }
+
+a = new Book(`lol1`,`boi`, 123, false)
+b = new Book(`lol2`,`boi`, 123, true)
+c = new Book(`lol3`,`boi`, 123, false)
+
+addBookToLibrary(a)
+addBookToLibrary(b)
+addBookToLibrary(c)
