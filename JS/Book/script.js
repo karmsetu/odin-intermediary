@@ -50,12 +50,36 @@ function showcase() {
     const displayisReadDiv = document.createElement("div")
     displayisReadDiv.innerText = displayisRead
     bookCard.append(displayisReadDiv)
+    let removeButton = document.createElement(`button`)
+    removeButton.innerText = `remove`
+    removeButton.classList.add(`remove-button`)
+    removeButton.classList.add(`remove-button-${index}`)
+    // removeButton.onclick = console.log(`boi`)
+    bookCard.append(removeButton)
     display.appendChild(bookCard)
     console.log(typeof(displayauthorDiv))
   }
+  const removeCardButton =  document.querySelectorAll(`.remove-button`)
+  removeCardButton.forEach(box => {
+    box.addEventListener(`click`, function boi(event){
+      event.preventDefault()
+      boxParent = box.parentElement
+      console.log()
+      // display.remove()
+      boxParent.remove()
+
+    })
+  }
+  
+  
+  )
+  console.log(removeCardButton)
 }
 
 
+// .addEventListener(`click`, function () {
+//   console.log(`hahaha`)
+// })
 
 // pa = new Book(`lol`, `boi`, 4000, true)
 // LOTR = new Book(`lord of the rings`, `boi`, 3000, true)
@@ -67,8 +91,8 @@ function openDialog() {
   document.querySelector(`.dialog`).classList.remove(`close`)
 }
 
-const submitButton = document.getElementById(`submit`)
-console.log(submit)
+const submitButton = document.querySelector(`.submit`)
+console.log(submitButton)
 const author = document.getElementById(`author`)
 console.log(author)
 const title = document.getElementById(`title`)
@@ -79,16 +103,22 @@ const isreadtrue = document.getElementById(`is-read-true`)
 const isreadfalse = document.getElementById(`is-read-false`)
 
 boi = []
-function getData() {
-  console.log(author.value)
-  boi.push(author)
-  console.log(title.value)
-  boi.push(title)
-  console.log(pages.value)
-  boi.push(pages)
-  // console.log(isreadtrue.value)
-  // boi.push(isreadtrue)
-  // console.log(isreadfalse.value)
-  // boi.push(isreadfalse)
-}
+
+submitButton.addEventListener("click", function(event){
+  event.preventDefault()
+  console.log(`hi`)
+  console.log(event)
+  const authorText =  author.value
+  boi.push(authorText)
+  const titleText = title.value
+  boi.push(titleText)
+  const pagesText= pages.value
+  boi.push(pagesText)
+  // const = .value  
+  let some = new Book(titleText, authorText, pagesText)
+  addBookToLibrary(some)
+  showcase()
+});
+
+
 console.log(boi)
