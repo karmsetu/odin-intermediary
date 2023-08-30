@@ -1,0 +1,21 @@
+body {
+    background-color: wheat;
+}
+
+.board {
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+    margin: 5px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
