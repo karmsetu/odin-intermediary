@@ -74,3 +74,51 @@ function recursiveCheck(paramsArray, number) {
     }
 
 }
+
+
+function recursiveArrayMul(paramsArray) {
+    if(paramsArray.length == 1) {
+        return paramsArray[0]
+    }
+    let recursiveInpArray = [...paramsArray]
+    recursiveInpArray.pop()
+    return paramsArray[paramsArray.length -1] * recursiveArrayMul(recursiveInpArray)
+}
+
+var nestedObject = {
+    data: {
+        info: {
+            stuff: {
+                thing: {
+                    moreStuff: {
+                        magicNumber: 44,
+                        // something: 'foo2'
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+function recursiveObjectCheck(array, params) {
+    let keys = Object.keys(array);
+    let newArrayParams = eval(`array.${keys}`)
+    console.log(keys)
+    console.log(typeof(newArrayParams))
+    console.log(newArrayParams)
+    if (newArrayParams === params) {
+        return newArrayParams
+    } else {
+        console.log(`failed `)
+
+        recursiveObjectCheck(newArrayParams, params)
+    }
+}
+
+// console.log(recursiveObjectCheck(nestedObject,8))  
+
+
+function recursiveMergeSort(paramsArray) {
+    
+}
