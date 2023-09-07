@@ -55,17 +55,64 @@ class linkedList {
 
     toString =()=> {
         var index = -1
+        let returnValue
         function recursiveCall(head) {
-            console.log(typeof(head))
-            if (head) {
+            let callStatement
+            if (!head) {
+                // console.log(`[${index}]:${head.value} -> ${recursiveCall(eval(`head.${Object.keys(head)[0]}`))}`)
                 return `tail`
-            }
+            } 
             index ++
-            // console.log({head, index})
-            console.log(`params:${head.value}, index:${index}`, {head})
-            console.log(recursiveCall(eval(`head.${Object.keys(head)[0]}`)))
+            
+            return `[${index}]:${head.value} -> ${recursiveCall(eval(`head.${Object.keys(head)[0]}`))}`
+            
         }
-        recursiveCall(this.head)
+        return recursiveCall(this.head)
+    }
+
+    size =()=> {
+        var count = 0
+        function recursiveCount(params) {
+            if (!params) {
+                return 0
+            }
+            count ++
+            recursiveCount(eval(`params.${Object.keys(params)[0]}`))
+            return count
+            // return count + recursiveCount(eval(`params.${Object.keys(params)[0]}`))
+        }
+        return recursiveCount(this.head)
+    }
+
+    heads() {
+        return this.head
+    }
+
+    at =(value)=> {
+        function r(params, count) {
+            var counts = count
+            if(!params){
+                console.error(`sorry there is no value: ${value} in the list`); 
+                return false
+            }
+            if (counts == value) {
+                return params
+            } else {
+                counts++
+                return r(eval(`params.${Object.keys(params)[0]}`), counts)
+            }
+        }
+        return r(this.head, 0)
+    }
+
+    pop =()=> {
+        let lastItem = this.at(this.size()-2)
+        lastItem.nextNode = null
+        return (this)
+    }
+
+    tail =()=> {
+        this.tail=  this.at(this.size()-1)
     }
 }
 
@@ -77,3 +124,7 @@ nL.append('c')
 nL.append('d')
 nL.append('e')
 console.log(nL.toString())
+console.log(nL.size())
+console.log(nL.heads())
+console.log(nL.at(3))
+console.log(nL.pop())
